@@ -1,7 +1,4 @@
-// Class for the player which can be extended.
-// Player has a name and a row/col starting point. Also has an image to be added
-
-class Player {
+class Player2 {
   constructor(x, y, w, h, ctx) {
     this.x = x;
     this.y = y;
@@ -11,7 +8,7 @@ class Player {
     this.lives = 3;
     this.image = new Image();
     // First index = y, second index = x
-    this.position = [1, 1];
+    this.position = [11, 11];
     this.tileSize = 38;
     // image.addEventListener("load", () => {
     //   this.image = image;
@@ -19,8 +16,8 @@ class Player {
     // });
   }
 
-  draw() {
-    this.image.src = "/docs/assets/images/player1.png";
+  draw2player() {
+    this.image.src = "/docs/assets/images/player2.png";
     this.ctx.drawImage(
       this.image,
       this.position[1] * this.tileSize,

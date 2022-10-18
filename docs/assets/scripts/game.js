@@ -24,7 +24,8 @@ class Game {
   }
 
   start() {
-    this.player = new Player(38, 38, 35, 35, this.ctx);
+    this.player = new Player(38, 38, 38, 38, this.ctx);
+    this.player2 = new Player2(38, 38, 38, 38, this.ctx);
     this.tileMap = new TileMap(this.tileSize);
     this.controls = new Controls(this.player);
     this.controls.keyboardEvents();
@@ -32,15 +33,15 @@ class Game {
   }
 
   update = () => {
-    
     this.tileMap.draw(this.canvas, this.ctx);
     this.player.draw();
+    this.player2.draw2player();
   };
 }
 
 function startGame() {
-    let game = new Game();
-    game.start();
+  let game = new Game();
+  game.start();
 }
 
 startGame();
