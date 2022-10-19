@@ -17,7 +17,7 @@ class Player2 {
   }
 
   draw2player() {
-    this.image.src = "/docs/assets/images/player2.png";
+    this.image.src = "docs/assets/images/player2.png";
     this.ctx.drawImage(
       this.image,
       this.position[1] * this.tileSize,

@@ -22,7 +22,7 @@ class TileMap {
 
   image(fileName) {
     const img = new Image();
-    img.src = `/docs/assets/images/${fileName}`;
+    img.src = `docs/assets/images/${fileName}`;
     return img;
   }
 

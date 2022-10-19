@@ -20,7 +20,7 @@ class Player {
   }
 
   draw() {
-    this.image.src = "/docs/assets/images/player1.png";
+    this.image.src = "docs/assets/images/player1.png";
     this.ctx.drawImage(
       this.image,
       // this index = x
