@@ -93,3 +93,12 @@ body {
 #h1-intro {
   margin-top: -5px;
 }
+
+#game-over {
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/docs/assets/images/drinkmore.jpeg);
+  background-image: no-repeat center;
+}

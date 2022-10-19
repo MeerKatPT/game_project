@@ -34,10 +34,7 @@ class Game {
     // this.controls.bomb.drawBomb();
   };
 
-  checkGameOver() {
-    
-  }
-
+  
   // stop() {
   //   clearInterval(this.intervalId);
   // }

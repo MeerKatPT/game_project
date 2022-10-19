@@ -11,7 +11,7 @@ class Bomb {
     this.y = this.player.position[0];
     this.x = this.player.position[1];
     this.image = new Image();
-    this.timer = 120; // bomb blows up after 3 seconds.
+    this.timer = 5; // bomb blows up after 3 seconds.
   }
   drawBomb() {
     this.image.src = "docs/assets/images/bomb2.png";
@@ -32,28 +32,28 @@ class Bomb {
       this.enemy.position[0] === this.y - 1 &&
       this.enemy.position[1] === this.x
     ) {
-      alert("BOOOOOM");
+      document.getElementById("game-over").style.display = "block";
     }
     //down
     if (
       this.enemy.position[0] === this.y + 1 &&
       this.enemy.position[1] === this.x
     ) {
-      alert("BOOOOM");
+      document.getElementById("game-over").style.display = "block";
     }
     //left
     if (
       this.enemy.position[1] === this.x - 1 &&
       this.enemy.position[0] === this.y
     ) {
-      alert("BOOOOM");
+      document.getElementById("game-over").style.display = "block";
     }
     //right
     if (
       this.enemy.position[1] === this.x + 1 &&
       this.enemy.position[0] === this.y
     ) {
-      alert("BOOOOM");
+      document.getElementById("game-over").style.display = "block";
     }
   }
 }
