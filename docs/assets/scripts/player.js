@@ -23,7 +23,9 @@ class Player {
     this.image.src = "/docs/assets/images/player1.png";
     this.ctx.drawImage(
       this.image,
+      // this index = x
       this.position[1] * this.tileSize,
+      // this index = y 
       this.position[0] * this.tileSize,
       this.w,
       this.h
