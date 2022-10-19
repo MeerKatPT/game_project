@@ -34,6 +34,14 @@ class Game {
     // this.controls.bomb.drawBomb();
   };
 
+  checkGameOver() {
+    
+  }
+
+  // stop() {
+  //   clearInterval(this.intervalId);
+  // }
+
   updateBombs = () => {
     for (let i = 0; i < this.bombArr.length; i++) {
       if (this.bombArr[i].timer <= 0) {
@@ -42,6 +50,7 @@ class Game {
         this.bombArr.splice(i, 1);
       } else {
         this.bombArr[i].timer--;
+
         this.bombArr[i].drawBomb();
       }
     }

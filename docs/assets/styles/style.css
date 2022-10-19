@@ -1,21 +1,22 @@
-@font-face{
-  font-family:'Arcade Interlaced';
-  font-style:normal;
-  font-weight:400;
-  src:local('Arcade Interlaced'),
-  url('http://fonts.cdnfonts.com/css/arcade')
-  format('woff')}
-
-  @font-face{
-    font-family:'Arcade';
-    font-style:normal;
-    font-weight:400;
-    src:local('Arcade'),
-    url('https://allfont.net/allfont.css?fonts=arcade')
-    format('woff')}
-
-/* @import url('http://fonts.cdnfonts.com/css/arcade');
-@import url(https://allfont.net/allfont.css?fonts=arcade); */
+@import url("http://fonts.cdnfonts.com/css/arcade");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Poppins:wght@900&family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nYivNm4I81PZQ.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Arcade Interlaced";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Arcade Interlaced"),
+    url("https://fonts.cdnfonts.com/s/6068/ARCADE_I.woff") format("woff");
+}
 body {
   overflow: hidden;
   margin: 0;
@@ -28,18 +29,21 @@ body {
 
 #div-intro {
   /* background-color: gray; */
-  background: rgb(63,94,251);
-  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
   position: absolute;
   width: 100vw;
   height: 100vh;
   /* background: url(/docs/assets/images/introimg.png) no-repeat center center */
-    fixed;
   text-align: center;
-  font-family: 'Arcade Interlaced', sans-serif;
+  font-family: "Arcade Interlaced", sans-serif;
+  /* font-family: "Press Start 2P", cursive; */
   font-size: 20px;
   z-index: 1;
-  
 }
 
 #div-game {
@@ -48,8 +52,13 @@ body {
   height: 100vh;
   /* background-color: gray;
   background: url(../images/background1.jpeg) no-repeat center center fixed; */
-  background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   display: none;
   flex-direction: column;
   align-items: center;
@@ -63,7 +72,9 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
 #start-button {
   font-size: 100px;
   background-color: #3455b1;
-  font-family: 'Arcade', arial;
+  /* font-family: "Arcade Interlaced", sans-serif; */
+  font-family: "Press Start 2P", cursive;
+  font-size: 75px;
   background-color: Transparent;
   color: #3455b1;
   padding: 20px 40px;

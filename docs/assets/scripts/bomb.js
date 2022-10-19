@@ -14,7 +14,7 @@ class Bomb {
     this.timer = 120; // bomb blows up after 3 seconds.
   }
   drawBomb() {
-    this.image.src = "docs/assets/images/bomb.png";
+    this.image.src = "docs/assets/images/bomb2.png";
     this.ctx.drawImage(
       this.image,
       // this index = x
@@ -43,15 +43,15 @@ class Bomb {
     }
     //left
     if (
-      this.enemy.position[0] === this.x - 1 &&
-      this.enemy.position[1] === this.y
+      this.enemy.position[1] === this.x - 1 &&
+      this.enemy.position[0] === this.y
     ) {
       alert("BOOOOM");
     }
     //right
     if (
-      this.enemy.position[0] === this.x + 1 &&
-      this.enemy.position[1] === this.y
+      this.enemy.position[1] === this.x + 1 &&
+      this.enemy.position[0] === this.y
     ) {
       alert("BOOOOM");
     }
