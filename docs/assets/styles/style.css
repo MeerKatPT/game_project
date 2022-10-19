@@ -1,5 +1,21 @@
-@import url('http://fonts.cdnfonts.com/css/arcade');
-@import url(https://allfont.net/allfont.css?fonts=arcade);
+@font-face{
+  font-family:'Arcade Interlaced';
+  font-style:normal;
+  font-weight:400;
+  src:local('Arcade Interlaced'),
+  url('http://fonts.cdnfonts.com/css/arcade')
+  format('woff')}
+
+  @font-face{
+    font-family:'Arcade';
+    font-style:normal;
+    font-weight:400;
+    src:local('Arcade'),
+    url('https://allfont.net/allfont.css?fonts=arcade')
+    format('woff')}
+
+/* @import url('http://fonts.cdnfonts.com/css/arcade');
+@import url(https://allfont.net/allfont.css?fonts=arcade); */
 body {
   overflow: hidden;
   margin: 0;
