@@ -1,62 +1,68 @@
+@import url('http://fonts.cdnfonts.com/css/arcade');
+@import url(https://allfont.net/allfont.css?fonts=arcade);
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 #canvas {
   box-shadow: 10px 10px 20px black;
 }
 
-/* #div-intro {
+#div-intro {
+  /* background-color: gray; */
+  background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   position: absolute;
   width: 100vw;
   height: 100vh;
+  /* background: url(/docs/assets/images/introimg.png) no-repeat center center */
+    fixed;
   text-align: center;
-  font-family: comic sans MS;
+  font-family: 'Arcade Interlaced', sans-serif;
   font-size: 20px;
-} */
+  z-index: 1;
+  
+}
 
-/* #div-game {
-  position: absolute; 
+#div-game {
+  position: absolute;
   width: 100vw;
   height: 100vh;
-  text-align: center;
-  font-family: comic sans MS;
-  font-size: 50px;
-  display: none; 
-  display: flex;
+  /* background-color: gray;
+  background: url(../images/background1.jpeg) no-repeat center center fixed; */
+  background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  display: none;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  height: 100vh;
-  background: url(../images/background.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}   */
+  padding-top: 10px;
+}
 
 #start-button {
-  font-size: 30px;
-  background-color: #870007;
-  color: #fff;
+  font-size: 100px;
+  background-color: #3455b1;
+  font-family: 'Arcade', arial;
+  background-color: Transparent;
+  color: #3455b1;
   padding: 20px 40px;
   border: 0;
   box-shadow: 0;
   border-radius: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
+  margin-top: 25px;
 }
 
-h1 {
-  text-align: center;
-  font-family: comic sans MS;
-  font-size: 50px;
-} 
+.intro-img {
+  width: 550px;
+}
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  height: 100vh;
-  background: url(../images/background.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+#h1-intro {
+  margin-top: -5px;
 }

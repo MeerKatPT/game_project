@@ -1,33 +1,17 @@
-// const canvas = document.getElementById("canvas");
-// const ctx = canvas.getContext("2d");
-// const tileSize = 38;
-
-// const tileMap = new TileMap(tileSize);
-// const player = new Player(38, 38, 35, 35, ctx);
-
-// function gameLoop() {
-//   console.log("olaolaoaloa");
-
-//   tileMap.draw(canvas, ctx);
-//   player.draw();
-
-// }
-// setInterval(gameLoop, 1000 / 60);
-
 class Game {
   constructor() {
     this.canvas = document.getElementById("canvas");
     this.ctx = canvas.getContext("2d");
     this.controls = null;
-    this.tileSize = 38;
+    this.tileSize = 50;
     this.intervalId = null;
     this.bombArr = [];
     this.tileMap = null;
   }
 
   start() {
-    this.player = new Player(38, 38, 38, 38, this.ctx);
-    this.player2 = new Player2(38, 38, 38, 38, this.ctx);
+    this.player = new Player(50, 50, 50, 50, this.ctx);
+    this.player2 = new Player2(50, 50, 50, 50, this.ctx);
     //this.bomb = new Bomb(38, 38, 38, 38, this.owner, this.ctx, this.player2);
     this.tileMap = new TileMap(this.tileSize);
     this.controls = new Controls(
@@ -83,12 +67,18 @@ class Game {
   }
 }
 
-function startGame() {
-  let game = new Game();
-  game.start();
-}
+window.onload = () => {
+  document.getElementById("start-button").onclick = () => {
+    startGame();
+    document.getElementById("div-intro").style.display = "none";
+    document.getElementById("div-game").style.display = "flex";
+  };
 
-startGame();
+  function startGame() {
+    let game = new Game();
+    game.start();
+  }
+};
 
 // const targetDiv = document.getElementById("third");
 // const btn = document.getElementById("start-button");

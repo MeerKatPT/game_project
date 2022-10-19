@@ -12,7 +12,7 @@ class Player {
     this.image = new Image();
     // First index = y, second index = x
     this.position = [1, 1];
-    this.tileSize = 38;
+    this.tileSize = 50;
     // image.addEventListener("load", () => {
     //   this.image = image;
     //   this.draw();

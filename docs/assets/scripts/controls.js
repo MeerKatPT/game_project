@@ -44,6 +44,14 @@ class Controls {
             console.log("Moved right");
           }
           break;
+        case "Space":
+          if (
+            this.map[this.player.position[0]][this.player.position[1]] === 2
+          ) {
+            this.bombArr.push(new Bomb(this.ctx, this.player, this.player2));
+            console.log("Dropped bomb");
+          }
+          break;
       }
     });
   }
@@ -89,7 +97,7 @@ class Controls {
             console.log("Moved right");
           }
           break;
-        case "Space":
+        case "Enter":
           if (
             this.map[this.player2.position[0]][this.player2.position[1]] === 2
           ) {

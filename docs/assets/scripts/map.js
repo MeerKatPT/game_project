@@ -31,8 +31,6 @@ class TileMap {
   1- wall
   2- empty
   3- box
- 
-
   */
 
   draw(canvas, ctx) {
