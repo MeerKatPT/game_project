@@ -84,7 +84,7 @@ class Game {
   }
 }
 
-const song = new Audio("/docs/assets/sounds/bomba.mp3");
+const song = new Audio("docs/assets/sounds/bomba.mp3");
 song.loop = false;
 window.onload = () => {
   document.getElementById("start-button").onclick = () => {
