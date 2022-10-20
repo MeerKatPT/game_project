@@ -12,7 +12,7 @@ class Bomb {
     this.x = this.player.position[1];
     this.image = new Image();
     this.image.src = imgsrc;
-    this.timer = 180; // bomb blows up after 3 seconds.
+    this.timer = 5; // bomb blows up after 3 seconds.
   }
   drawBomb() {
     this.ctx.drawImage(
@@ -32,28 +32,28 @@ class Bomb {
       this.enemy.position[0] === this.y - 1 &&
       this.enemy.position[1] === this.x
     ) {
-      return true;
+      return this.player;
     }
     //down
     if (
       this.enemy.position[0] === this.y + 1 &&
       this.enemy.position[1] === this.x
     ) {
-      return true;
+      return this.player;
     }
     //left
     if (
       this.enemy.position[1] === this.x - 1 &&
       this.enemy.position[0] === this.y
     ) {
-      return true;
+      return this.player;
     }
     //right
     if (
       this.enemy.position[1] === this.x + 1 &&
       this.enemy.position[0] === this.y
     ) {
-      return true;
+      return this.player;
     }
   }
 }

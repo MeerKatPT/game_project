@@ -45,7 +45,15 @@ class Game {
         this.bombExplode(this.bombArr[i]);
         if (this.bombArr[i].playerExplode()) {
           clearInterval(this.intervalId);
-          this.gameOverScreen();
+          this.overimg.src = "docs/assets/images/background.jpeg";
+          this.ctx.drawImage(this.overimg, 0, 0, 50, 300);
+          this.ctx.fillStyle = "white";
+          this.ctx.font = "50px monospace";
+          this.ctx.fillText(
+            `${this.bombArr[i].playerExplode().name} wins`,
+            50,
+            300
+          );
         }
         this.bombArr.splice(i, 1);
       } else {
@@ -56,13 +64,13 @@ class Game {
     }
   };
 
-  gameOverScreen() {
+  /*   gameOverScreen() {
     this.overimg.src = "docs/assets/images/background.jpeg";
     this.ctx.drawImage(this.overimg, 0, 0, 50, 300);
     this.ctx.fillStyle = "white";
     this.ctx.font = "50px monospace";
     this.ctx.fillText(`${this.player.name} wins`, 50, 300);
-  }
+  } */
 
   bombExplode(bomb) {
     //up
