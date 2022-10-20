@@ -1,5 +1,5 @@
 class Bomb {
-  constructor(ctx, player, enemy) {
+  constructor(ctx, player, enemy, imgsrc) {
     this.w = 50;
     this.h = 50;
     this.ctx = ctx;
@@ -11,10 +11,10 @@ class Bomb {
     this.y = this.player.position[0];
     this.x = this.player.position[1];
     this.image = new Image();
-    this.timer = 180; // bomb blows up after 3 seconds.
+    this.image.src = imgsrc;
+    this.timer = 5; // bomb blows up after 3 seconds.
   }
   drawBomb() {
-    this.image.src = "docs/assets/images/bomb2.png";
     this.ctx.drawImage(
       this.image,
       // this index = x
@@ -32,28 +32,28 @@ class Bomb {
       this.enemy.position[0] === this.y - 1 &&
       this.enemy.position[1] === this.x
     ) {
-      document.getElementById("game-over").style.display = "block";
+      return true;
     }
     //down
     if (
       this.enemy.position[0] === this.y + 1 &&
       this.enemy.position[1] === this.x
     ) {
-      document.getElementById("game-over").style.display = "block";
+      return true;
     }
     //left
     if (
       this.enemy.position[1] === this.x - 1 &&
       this.enemy.position[0] === this.y
     ) {
-      document.getElementById("game-over").style.display = "block";
+      return true;
     }
     //right
     if (
       this.enemy.position[1] === this.x + 1 &&
       this.enemy.position[0] === this.y
     ) {
-      document.getElementById("game-over").style.display = "block";
+      return true;
     }
   }
 }

@@ -48,7 +48,14 @@ class Controls {
           if (
             this.map[this.player.position[0]][this.player.position[1]] === 2
           ) {
-            this.bombArr.push(new Bomb(this.ctx, this.player, this.player2));
+            this.bombArr.push(
+              new Bomb(
+                this.ctx,
+                this.player,
+                this.player2,
+                "/docs/assets/images/bluebomb.png"
+              )
+            );
             console.log("Dropped bomb");
           }
           break;
@@ -101,7 +108,14 @@ class Controls {
           if (
             this.map[this.player2.position[0]][this.player2.position[1]] === 2
           ) {
-            this.bombArr.push(new Bomb(this.ctx, this.player2, this.player));
+            this.bombArr.push(
+              new Bomb(
+                this.ctx,
+                this.player2,
+                this.player,
+                "/docs/assets/images/bomb2.png"
+              )
+            );
             console.log("Dropped bomb");
           }
           break;

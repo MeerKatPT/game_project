@@ -7,6 +7,7 @@ class Player {
     this.y = y;
     this.w = w;
     this.h = h;
+    this.name = "Ironhack Blue";
     this.ctx = ctx;
     this.lives = 3;
     this.image = new Image();

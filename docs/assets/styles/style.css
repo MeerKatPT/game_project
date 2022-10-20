@@ -17,6 +17,10 @@
   src: local("Arcade Interlaced"),
     url("https://fonts.cdnfonts.com/s/6068/ARCADE_I.woff") format("woff");
 }
+@font-face {
+  font-family: sevenSegment;
+  src: url(seven-segment.ttf);
+}
 body {
   overflow: hidden;
   margin: 0;
@@ -44,6 +48,7 @@ body {
   /* font-family: "Press Start 2P", cursive; */
   font-size: 20px;
   z-index: 1;
+  
 }
 
 #div-game {
@@ -67,6 +72,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   padding-top: 10px;
+
 }
 
 #start-button {
@@ -94,11 +100,13 @@ body {
   margin-top: -5px;
 }
 
-#game-over {
+/* #game-over {
   position: absolute;
   display: none;
   width: 100vw;
   height: 100vh;
+  background-size: 100vw;
+  background-size: 100vh;
   background-image: url(/docs/assets/images/drinkmore.jpeg);
-  background-image: no-repeat center;
-}
+  background-repeat: no-repeat;
+} */

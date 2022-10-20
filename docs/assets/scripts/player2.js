@@ -6,6 +6,7 @@ class Player2 {
     this.h = h;
     this.ctx = ctx;
     this.lives = 3;
+    this.name = "Ironhack White";
     this.image = new Image();
     // First index = y, second index = x
     this.position = [11, 11];

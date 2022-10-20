@@ -7,6 +7,7 @@ class Game {
     this.intervalId = null;
     this.bombArr = [];
     this.tileMap = null;
+    this.overimg = new Image();
   }
 
   start() {
@@ -34,7 +35,6 @@ class Game {
     // this.controls.bomb.drawBomb();
   };
 
-  
   // stop() {
   //   clearInterval(this.intervalId);
   // }
@@ -43,7 +43,10 @@ class Game {
     for (let i = 0; i < this.bombArr.length; i++) {
       if (this.bombArr[i].timer <= 0) {
         this.bombExplode(this.bombArr[i]);
-        this.bombArr[i].playerExplode();
+        if (this.bombArr[i].playerExplode()) {
+          clearInterval(this.intervalId);
+          this.gameOverScreen();
+        }
         this.bombArr.splice(i, 1);
       } else {
         this.bombArr[i].timer--;
@@ -52,6 +55,14 @@ class Game {
       }
     }
   };
+
+  gameOverScreen() {
+    this.overimg.src = "docs/assets/images/background.jpeg";
+    this.ctx.drawImage(this.overimg, 0, 0, 50, 300);
+    this.ctx.fillStyle = "white";
+    this.ctx.font = "50px monospace";
+    this.ctx.fillText(`${this.player.name} wins`, 50, 300);
+  }
 
   bombExplode(bomb) {
     //up
@@ -73,11 +84,16 @@ class Game {
   }
 }
 
+const song = new Audio("/docs/assets/sounds/bomba.mp3");
+song.loop = false;
 window.onload = () => {
   document.getElementById("start-button").onclick = () => {
-    startGame();
-    document.getElementById("div-intro").style.display = "none";
-    document.getElementById("div-game").style.display = "flex";
+    song.play();
+    setTimeout(() => {
+      document.getElementById("div-intro").style.display = "none";
+      document.getElementById("div-game").style.display = "flex";
+      startGame();
+    }, 3000);
   };
 
   function startGame() {
