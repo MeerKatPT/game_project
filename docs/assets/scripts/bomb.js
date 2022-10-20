@@ -12,7 +12,7 @@ class Bomb {
     this.x = this.player.position[1];
     this.image = new Image();
     this.image.src = imgsrc;
-    this.timer = 5; // bomb blows up after 3 seconds.
+    this.timer = 180; // bomb blows up after 3 seconds.
   }
   drawBomb() {
     this.ctx.drawImage(
