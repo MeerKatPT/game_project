@@ -53,7 +53,7 @@ class Controls {
                 this.ctx,
                 this.player,
                 this.player2,
-                "/docs/assets/images/bluebomb.png"
+                "docs/assets/images/bluebomb.png"
               )
             );
             console.log("Dropped bomb");
@@ -113,7 +113,7 @@ class Controls {
                 this.ctx,
                 this.player2,
                 this.player,
-                "/docs/assets/images/bomb2.png"
+                "docs/assets/images/bomb2.png"
               )
             );
             console.log("Dropped bomb");
